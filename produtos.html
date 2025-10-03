@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias de Produtos - Agronegócio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #FAFAFA;
+            color: #2C2C2C;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .categories {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .category-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            padding: 40px;
+            background: #FFFFFF;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .category-item:hover {
+            box-shadow: 0 8px 24px rgba(7, 91, 6, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .category-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #F5F5F5;
+            transition: all 0.3s ease;
+        }
+
+        .category-item:hover .category-image {
+            border-color: #075B06;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .category-title {
+            font-size: 1.5em;
+            color: #075B06;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .category-description {
+            color: #666666;
+            margin-bottom: 24px;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            color: #4A4A4A;
+            font-size: 0.9em;
+            padding: 8px 18px;
+            background: #F8F8F8;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            font-weight: 500;
+        }
+
+        .product-tag:hover {
+            background: #075B06;
+            color: #FFFFFF;
+            border-color: #075B06;
+            transform: translateY(-1px);
+        }
+
+        .cta-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #075B06;
+            color: #FFFFFF;
+            padding: 16px 48px;
+            font-size: 1.05em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(7, 91, 6, 0.25);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #064D05;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 91, 6, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            .category-item {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 28px;
+                text-align: center;
+            }
+
+            .category-image {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+            }
+
+            .category-title {
+                font-size: 1.3em;
+            }
+
+            .category-description {
+                font-size: 0.9em;
+            }
+
+            .products-grid {
+                justify-content: center;
+            }
+
+            .product-tag {
+                font-size: 0.85em;
+                padding: 7px 16px;
+            }
+
+            .cta-button {
+                padding: 14px 36px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-item {
+                padding: 24px;
+            }
+
+            .category-image {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="categories">
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/sulfatodeamonio.webp" alt="Nitrogenados">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">NITROGENADOS</h2>
+                    <p class="category-description">
+                        Fertilizantes ricos em nitrogênio, essenciais para o crescimento vegetativo das plantas, formação de proteínas e desenvolvimento saudável das culturas. Indicados para diversas fases do ciclo produtivo.
+                    </p>
+                    <div class="products-grid">
+                        <a href="sulfato.html" class="product-tag">Sulfato</a>
+                        <a href="ureia.html" class="product-tag">Uréia</a>
+                        <a href="nitrato.html" class="product-tag">Nitrato</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/map-11-52-00.webp" alt="Fosfatados">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">FOSFATADOS</h2>
+                    <p class="category-description">
+                        Fertilizantes com alta concentração de fósforo, fundamentais para o desenvolvimento radicular, floração e frutificação. Essenciais para o estabelecimento inicial das culturas e maior produtividade.
+                    </p>
+                    <div class="products-grid">
+                        <a href="map1050.html" class="product-tag">MAP 10-50</a>
+                        <a href="map1152.html" class="product-tag">MAP 11-52</a>
+                        <a href="np1045.html" class="product-tag">NP 10-45</a>
+                        <a href="np1144.html" class="product-tag">NP 11-44</a>
+                        <a href="dap.html" class="product-tag">DAP</a>
+                        <a href="fosfatonaturalreativo.html" class="product-tag">Fosfato Natural Reativo</a>
+                        <a href="superfosfatotriplo.html" class="product-tag">Super Fosfato Triplo</a>
+                        <a href="superfosfatosimples.html" class="product-tag">Super Simples</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/sulfatodepotassio.webp" alt="Potássicos">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">POTÁSSICOS</h2>
+                    <p class="category-description">
+                        Fertilizantes fonte de potássio, essenciais para o enchimento de grãos, desenvolvimento de frutos de qualidade e aumento da resistência das plantas a estresses e doenças.
+                    </p>
+                    <div class="products-grid">
+                        <a href="cloretodepotassio.html" class="product-tag">Cloreto de Potássio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/sulfatodeamonio.webp" alt="NPS NPK no grão">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">NPS NPK NO GRÃO</h2>
+                    <p class="category-description">
+                        Fertilizantes compostos com formulações específicas para aplicação no grão, oferecendo nutrição balanceada e completa para diferentes culturas e necessidades do solo.
+                    </p>
+                    <div class="products-grid">
+                        <a href="151515.html" class="product-tag">15-15-15 + 10S</a>
+                        <a href="0840.html" class="product-tag">08-40 + 5S</a>
+                        <a href="124051.html" class="product-tag">12-40 + 5S + 1Z</a>
+                        <a href="270606.html" class="product-tag">27-06-06</a>
+                        <a href="102626.html" class="product-tag">10-26-26</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/npk-19-04-19.webp" alt="Produtos Especiais">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">PRODUTOS ESPECIAIS</h2>
+                    <p class="category-description">
+                        Linha premium de fertilizantes e corretivos especiais, desenvolvidos para atender necessidades específicas de nutrição das culturas, com alta pureza e eficiência.
+                    </p>
+                    <div class="products-grid">
+                        <a href="mappurificado.html" class="product-tag">MAP Purificado</a>
+                        <a href="enxofredebetonita.html" class="product-tag">Enxofre de Bentonita</a>
+                        <a href="exofreelementar99.html" class="product-tag">Enxofre Elementar 99%</a>
+                        <a href="boroulexita.html" class="product-tag">Boro Ulexita</a>
+                        <a href="zinco10.html" class="product-tag">Zinco 10%</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="https://agrofertilizantes.com.br/wp-content/uploads/2025/10/map-11-52-00.webp" alt="Linha Pecuária">
+                </div>
+                <div class="category-info">
+                    <h2 class="category-title">LINHA PECUÁRIA</h2>
+                    <p class="category-description">
+                        Produtos desenvolvidos especialmente para nutrição animal, oferecendo fontes de fósforo, cálcio e nitrogênio essenciais para a saúde e produtividade do rebanho.
+                    </p>
+                    <div class="products-grid">
+                        <a href="fosforobicalcio.html" class="product-tag">Fosfato Bicálcico</a>
+                        <a href="fosfatomonocalcio.html" class="product-tag">Fosfato Monocálcico</a>
+                        <a href="ureiapecuaria.html" class="product-tag">Uréia Pecuária</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
